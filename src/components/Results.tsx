@@ -107,14 +107,12 @@ export const Results = () => {
       );
 
     case "/news":
-      console.log(results);
-
       return (
         <div className="relative w-full flex-1 flex items-start p-6">
           <div className="hidden md:block flex-shrink-0 w-40" />
           <div className="w-full md:max-w-[640px]">
             <div className="flex flex-col gap-6">
-              {(results as NewsResultType)?.entries.map(
+              {(results as NewsResultType)?.entries?.map(
                 ({ links, title, id, source }) => (
                   <div key={id}>
                     <a
@@ -173,8 +171,8 @@ export const Results = () => {
                         {title}
                       </span>
                     </a>
-                    <div className="flex gap-6 mt-1">
-                      <div className="flex-shrink-0 w-[200px] aspect-video rounded-xl overflow-hidden">
+                    <div className="flex flex-col md:flex-row gap-6 mt-1">
+                      <div className="flex-shrink-0 w-full md:w-[200px] aspect-video rounded-xl overflow-hidden">
                         <ReactPlayer
                           controls
                           style={{

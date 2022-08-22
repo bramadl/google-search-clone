@@ -13,7 +13,7 @@ export const HomePage = () => {
   }, []);
   
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center p-6">
       <div className="flex flex-col items-center justify-center gap-12 w-full max-w-[640px] mx-auto">
         <Link
           className="w-full h-full flex items-center justify-center"

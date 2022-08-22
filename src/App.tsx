@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className={darkTheme ? "dark" : ""}>
-      <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-neutral-800 dark:text-gray-200">
+      <div className="min-h-screen flex flex-col bg-gray-100 dark:bg-neutral-800 dark:text-gray-200 overflow-hidden">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route

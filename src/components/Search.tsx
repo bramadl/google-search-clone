@@ -19,6 +19,11 @@ export const Search = () => {
     }
   };
 
+  const clearSearch = () => {
+    setSearchTerm("");
+    searchInput.current!.focus();
+  };
+
   useEffect(() => {
     if (searchInput.current) searchInput.current.focus();
   }, []);
@@ -38,7 +43,7 @@ export const Search = () => {
         <button
           className="absolute top-1/2 -translate-y-1/2 right-4 text-2xl text-gray-500"
           type="button"
-          onClick={() => setSearchTerm("")}
+          onClick={clearSearch}
         >
           <MdClose />
         </button>

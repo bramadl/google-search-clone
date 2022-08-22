@@ -1,15 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import './index.css';
-import App from './App';
+import App from "./App";
+import { ResultContextProvider } from "./context/ResultContextProvider";
+import "./index.css";
 
-const container = document.getElementById('root') as HTMLElement;
+const container = document.getElementById("root") as HTMLElement;
 const root = ReactDOM.createRoot(container);
 
 root.render(
   <BrowserRouter>
-    <App />
+    <ResultContextProvider>
+      <App />
+    </ResultContextProvider>
   </BrowserRouter>
 );

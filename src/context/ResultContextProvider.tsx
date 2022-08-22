@@ -27,7 +27,7 @@ export const ResultContextProvider: React.FC<ResultContextProviderProps> = ({
       headers: {
         "X-User-Agent": "desktop",
         "X-Proxy-Location": "EU",
-        "X-RapidAPI-Key": "0e65fb8ea0msh23f35e45398bc92p104906jsnf6d32c73c5c8",
+        "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY as string,
         "X-RapidAPI-Host": "google-search3.p.rapidapi.com",
       },
     });
